@@ -1,4 +1,4 @@
-package com.miazina.hw8;
+package com.miazina.hw8.user;
 
 public class User {
     private String name;
