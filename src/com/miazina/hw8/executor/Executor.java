@@ -5,5 +5,6 @@ import com.miazina.hw8.tasks.*;
 public class Executor {
     public static void start() {
         new TaskWithUsers().printResults();
+        new TaskWithRandom().printResults();
     }
 }
