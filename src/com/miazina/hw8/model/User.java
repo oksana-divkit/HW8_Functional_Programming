@@ -1,4 +1,6 @@
-package com.miazina.hw8.user;
+package com.miazina.hw8.model;
+
+import java.util.Objects;
 
 public class User {
     private String name;
@@ -30,5 +32,20 @@ public class User {
                 ", age=" + age +
                 ", city='" + city + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age &&
+                name.equals(user.name) &&
+                city.equals(user.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, city);
     }
 }
